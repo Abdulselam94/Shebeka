@@ -23,3 +23,16 @@ Thumbs.db
 # Build outputs
 dist/
 build/
+
+node_modules/
+.env
+.env.local
+.DS_Store
+dist/
+coverage/
+.vscode/
+.idea/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.prisma/
