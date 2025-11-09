@@ -9,3 +9,11 @@ Content-Type: application/json
   "role": "RECRUITER"
 }
 
+### Login User
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "abdulselam@example.com",
+  "password": "123456"
+}
