@@ -17,3 +17,23 @@ Content-Type: application/json
   "email": "abdulselam@example.com",
   "password": "123456"
 }
+
+### Register Third User (Another Recruiter)
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+  "name": "Jane Smith",
+  "email": "jane@example.com",
+  "password": "123456",
+  "role": "RECRUITER"
+}
+
+### Login User
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "jane@example.com",
+  "password": "123456"
+}

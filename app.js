@@ -19,14 +19,15 @@ app.use(morgan("dev"));
 // health check
 app.get("/health", (req, res) => res.json({ status: "ok" }));
 
-app.use(errorHandler);
-
-//route
+// ✅ ROUTES - SHOULD COME BEFORE ERROR HANDLER
 app.use("/api/auth", authRoutes);
 
 // placeholder route
 app.get("/", (req, res) => {
   res.json({ message: "Job Portal Backend — API is running" });
 });
+
+// ✅ ERROR HANDLER - MUST COME AFTER ALL ROUTES
+app.use(errorHandler);
 
 export default app;
