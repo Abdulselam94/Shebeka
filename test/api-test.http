@@ -37,3 +37,63 @@ Content-Type: application/json
   "email": "jane@example.com",
   "password": "123456"
 }
+
+### Jobs
+POST http://localhost:5000/api/jobs
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6IlJFQ1JVSVRFUiIsImlhdCI6MTc2MjY5Nzg3MSwiZXhwIjoxNzYzMzAyNjcxfQ.w80orirZPTP830UtaggUEXyJwBFUhVn82dX_PwDRpR0
+Content-Type: application/json
+
+{
+  "title": "Senior Node.js Developer",
+  "description": "We are looking for an experienced Node.js developer to join our backend team. You will be building scalable APIs and microservices.",
+  "requirements": "5+ years of Node.js experience, Express.js, PostgreSQL, REST APIs, Docker",
+  "salary": "$90,000 - $130,000",
+  "location": "San Francisco, CA",
+  "jobType": "FULL_TIME",
+  "experienceLevel": "SENIOR",
+  "category": "Engineering",
+  "tags": ["Node.js", "Express", "PostgreSQL", "Docker", "API"],
+  "isRemote": false,
+  "expiresAt": "2024-12-31"
+}
+
+### Create Job
+POST http://localhost:5000/api/jobs
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6IlJFQ1JVSVRFUiIsImlhdCI6MTc2MjY5Nzg3MSwiZXhwIjoxNzYzMzAyNjcxfQ.w80orirZPTP830UtaggUEXyJwBFUhVn82dX_PwDRpR0
+Content-Type: application/json
+
+{
+  "title": "Full Stack Developer",
+  "description": "Looking for a full stack developer with React and Node.js experience",
+  "requirements": "3+ years experience, React, Node.js, MongoDB",
+  "salary": "$70,000 - $100,000",
+  "location": "Remote",
+  "jobType": "FULL_TIME",
+  "experienceLevel": "MID",
+  "category": "Engineering",
+  "tags": ["React", "Node.js", "MongoDB", "JavaScript"],
+  "isRemote": true
+}
+
+
+### Get All Jobs
+GET http://localhost:5000/api/jobs
+
+### Get My Jobs
+GET http://localhost:5000/api/jobs/my/jobs
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6IlJFQ1JVSVRFUiIsImlhdCI6MTc2MjY5Nzg3MSwiZXhwIjoxNzYzMzAyNjcxfQ.w80orirZPTP830UtaggUEXyJwBFUhVn82dX_PwDRpR0 
+
+### Update
+PUT http://localhost:5000/api/jobs/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6IlJFQ1JVSVRFUiIsImlhdCI6MTc2MjY5Nzg3MSwiZXhwIjoxNzYzMzAyNjcxfQ.w80orirZPTP830UtaggUEXyJwBFUhVn82dX_PwDRpR0 
+Content-Type: application/json
+
+{
+  "title": "Senior Node.js Developer - Updated",
+  "salary": "$95,000 - $135,000",
+  "isRemote": true
+}
+
+###Delete
+DELETE http://localhost:5000/api/jobs/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6IlJFQ1JVSVRFUiIsImlhdCI6MTc2MjY5Nzg3MSwiZXhwIjoxNzYzMzAyNjcxfQ.w80orirZPTP830UtaggUEXyJwBFUhVn82dX_PwDRpR0 

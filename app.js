@@ -3,6 +3,7 @@ import express from "express";
 import cors from "cors";
 import helmet from "helmet";
 import morgan from "morgan";
+import jobRoutes from "./routes/job.routes.js";
 
 import { errorHandler } from "./middleware/error.js";
 import authRoutes from "./routes/auth.routes.js";
@@ -21,6 +22,8 @@ app.get("/health", (req, res) => res.json({ status: "ok" }));
 
 // ✅ ROUTES - SHOULD COME BEFORE ERROR HANDLER
 app.use("/api/auth", authRoutes);
+
+app.use("/api/jobs", jobRoutes);
 
 // placeholder route
 app.get("/", (req, res) => {
