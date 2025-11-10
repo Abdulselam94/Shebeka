@@ -170,9 +170,12 @@ Content-Type: application/json
 
 ###update resume
 PUT http://localhost:5000/api/users/resume
-Authorization: Bearer YOUR_CANDIDATE_TOKEN
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFQUExJRVIiLCJpYXQiOjE3NjI3ODkwNDksImV4cCI6MTc2MzM5Mzg0OX0.k2m71at0QyQE5YSYEVZDxF3pf5K6x9Kh9W5WaUlT0fM
 Content-Type: application/json
 
 {
   "resumeUrl": "https://example.com/my-updated-resume.pdf"
 }
+###view profile
+GET http://localhost:5000/api/users/public/4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6IlJFQ1JVSVRFUiIsImlhdCI6MTc2Mjc4OTQwMiwiZXhwIjoxNzYzMzk0MjAyfQ.l3PyMw-sEXsB-aAF7ZwI-Co-NsVLGXWmAiLFrAAVXmk
