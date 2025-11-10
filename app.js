@@ -4,6 +4,7 @@ import cors from "cors";
 import helmet from "helmet";
 import morgan from "morgan";
 import jobRoutes from "./routes/job.routes.js";
+import applicationRoutes from "./routes/applier.routes.js";
 
 import { errorHandler } from "./middleware/error.js";
 import authRoutes from "./routes/auth.routes.js";
@@ -24,6 +25,7 @@ app.get("/health", (req, res) => res.json({ status: "ok" }));
 app.use("/api/auth", authRoutes);
 
 app.use("/api/jobs", jobRoutes);
+app.use("/api/applications", applicationRoutes);
 
 // placeholder route
 app.get("/", (req, res) => {

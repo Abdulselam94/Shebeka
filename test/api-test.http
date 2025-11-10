@@ -97,3 +97,36 @@ Content-Type: application/json
 ###Delete
 DELETE http://localhost:5000/api/jobs/1
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6IlJFQ1JVSVRFUiIsImlhdCI6MTc2MjY5Nzg3MSwiZXhwIjoxNzYzMzAyNjcxfQ.w80orirZPTP830UtaggUEXyJwBFUhVn82dX_PwDRpR0 
+
+### Register User
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+  "name": "Abdi Taye",
+  "email": "abdi@example.com",
+  "password": "123456",
+  "role": "APPLIER"
+}
+
+###Login
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "abdi@example.com",
+  "password": "123456"
+}
+
+###Apply
+POST http://localhost:5000/api/applications/job/1/apply
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFQUExJRVIiLCJpYXQiOjE3NjI3ODE4MjEsImV4cCI6MTc2MzM4NjYyMX0.gSe8OTAQUSCyE1hVGABEjcH-eAMelRaoiTkimbCuOQI
+Content-Type: application/json
+
+{
+  "coverLetter": "Simple test application"
+}
+
+###a
+GET http://localhost:5000/api/applications/my/applications
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6IlJFQ1JVSVRFUiIsImlhdCI6MTc2MjY5Nzg3MSwiZXhwIjoxNzYzMzAyNjcxfQ.w80orirZPTP830UtaggUEXyJwBFUhVn82dX_PwDRpR0 
