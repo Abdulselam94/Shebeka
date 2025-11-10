@@ -119,7 +119,7 @@ Content-Type: application/json
 }
 
 ###Apply
-POST http://localhost:5000/api/applications/job/1/apply
+POST http://localhost:5000/api/applications/job/6/apply
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFQUExJRVIiLCJpYXQiOjE3NjI3ODE4MjEsImV4cCI6MTc2MzM4NjYyMX0.gSe8OTAQUSCyE1hVGABEjcH-eAMelRaoiTkimbCuOQI
 Content-Type: application/json
 
@@ -128,5 +128,51 @@ Content-Type: application/json
 }
 
 ###a
-GET http://localhost:5000/api/applications/my/applications
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6IlJFQ1JVSVRFUiIsImlhdCI6MTc2MjY5Nzg3MSwiZXhwIjoxNzYzMzAyNjcxfQ.w80orirZPTP830UtaggUEXyJwBFUhVn82dX_PwDRpR0 
+GET http://localhost:5000/api/applications/job/7/applications
+Authorization: Bearer yJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6IlJFQ1JVSVRFUiIsImlhdCI6MTc2Mjc4NTk5NSwiZXhwIjoxNzYzMzkwNzk1fQ.yhxbUM68MU1KAvguDmWcJkuZw9O5TFq1--XqxyDFNVo
+
+###Status
+PUT http://localhost:5000/api/applications/4/status
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6IlJFQ1JVSVRFUiIsImlhdCI6MTc2Mjc4NjA5OCwiZXhwIjoxNzYzMzkwODk4fQ.8T3Bv_TNoyzEnnJMLKeqPKb8cZAqgpH9J9t6SE4cT9o
+Content-Type: application/json
+
+{
+  "status": "REVIEWED"
+}
+
+### Option 2: Use PATCH method
+PUT http://localhost:5000/api/applications/7/status
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6IlJFQ1JVSVRFUiIsImlhdCI6MTc2Mjc4NjA5OCwiZXhwIjoxNzYzMzkwODk4fQ.8T3Bv_TNoyzEnnJMLKeqPKb8cZAqgpH9J9t6SE4cT9o
+Content-Type: application/json
+
+{
+  "status": "REVIEWED"
+}
+### profile update
+PUT http://localhost:5000/api/users/profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFQUExJRVIiLCJpYXQiOjE3NjI3ODg5NTgsImV4cCI6MTc2MzM5Mzc1OH0.Z520MH3rkktHowSuqU4_kSZQSMqUeZsPVFbqjrzeieo
+Content-Type: application/json
+
+{
+  "name": "Abdse",
+  "phone": "+1234567890",
+  "bio": "Experienced full-stack developer passionate about creating amazing web applications.",
+  "location": "San Francisco, CA"
+}
+###adding skills
+POST http://localhost:5000/api/users/skills
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFQUExJRVIiLCJpYXQiOjE3NjI3ODkwNDksImV4cCI6MTc2MzM5Mzg0OX0.k2m71at0QyQE5YSYEVZDxF3pf5K6x9Kh9W5WaUlT0fM
+Content-Type: application/json
+
+{
+  "skill": "JavaScript"
+}
+
+###update resume
+PUT http://localhost:5000/api/users/resume
+Authorization: Bearer YOUR_CANDIDATE_TOKEN
+Content-Type: application/json
+
+{
+  "resumeUrl": "https://example.com/my-updated-resume.pdf"
+}

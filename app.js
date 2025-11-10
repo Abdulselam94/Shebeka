@@ -5,6 +5,7 @@ import helmet from "helmet";
 import morgan from "morgan";
 import jobRoutes from "./routes/job.routes.js";
 import applicationRoutes from "./routes/applier.routes.js";
+import userRoutes from "./routes/user.routes.js";
 
 import { errorHandler } from "./middleware/error.js";
 import authRoutes from "./routes/auth.routes.js";
@@ -26,6 +27,7 @@ app.use("/api/auth", authRoutes);
 
 app.use("/api/jobs", jobRoutes);
 app.use("/api/applications", applicationRoutes);
+app.use("/api/users", userRoutes);
 
 // placeholder route
 app.get("/", (req, res) => {

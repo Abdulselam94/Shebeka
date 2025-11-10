@@ -1,4 +1,4 @@
-// controllers/application.controller.js
+// controllers/applier.controller.js
 import { prisma } from "../config/db.js";
 
 // Apply to a job
@@ -91,7 +91,7 @@ export const getMyApplications = async (req, res) => {
           select: {
             id: true,
             title: true,
-            company: true,
+
             location: true,
             jobType: true,
             salary: true,
