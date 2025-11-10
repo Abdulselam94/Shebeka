@@ -201,7 +201,7 @@ Feel free to fork, create a branch, and open a pull request.
 
 **Abdulselam Taye**  
 🚀 Passionate Electrical & Computer Engineer | Full-Stack Developer  
-📧 abdulselamtaye@example.com
+📧 abdulselam.taye-ug@aau.edu.et
 
 ---
 
